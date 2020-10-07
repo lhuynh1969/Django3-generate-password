@@ -1,0 +1,10 @@
+
+<title>All Blogs</title>
+{% for blog in blogs %}
+    <h2>{{ blog.title }}</h2>
+    <h5>{{ blog.date }}</h5>
+    <p>{{ blog.description }}</p>
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" height=50 width=100><br>
+    {% endif %}
+{% endfor %}
