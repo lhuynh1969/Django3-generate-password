@@ -18,7 +18,7 @@ def password(request):
     # Numbers
     if request.GET.get('numbers'):characters.extend('0123456789')
     # Default length is 12
-    length = int(request.GET.get('length',12))
+    length = int(request.GET.get('length',25))
     thepassword = ''
     for x in range(length):
         thepassword += random.choice(characters)
